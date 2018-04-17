@@ -150,6 +150,7 @@ app.listen(port)
 ```
 <br/>
 To develop this rest api, below external libraries are used, use of each of them is explained in front of them.
+<br/>
 
 ```
  "dependencies": {
@@ -166,10 +167,43 @@ To develop this rest api, below external libraries are used, use of each of them
   }
   
 ```
-   
-   
-   
-   
+<br/>
+## Database
+MongoDb is used to handle database. Mongoose mongodb object modelling used for making database operations simple. This is example mongoose schema, it represents `level` collection in database.
+
+```
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const level = new Schema({
+    level: Number,
+    description: String,
+    pointsToCollect: Number,
+    bonusCoins: Number,
+    bonusPoints: Number,
+    dateWritten: {
+        type: Date,
+        default: Date.now()
+    },
+    dateUpdated: Date,
+    status: {
+        type: String,
+        default: 'active',
+        enum: ['active', 'deactive']
+    }
+
+});
+
+module.exports = mongoose.model('level', level);
+```
+<br/>
+Mongoose allows us to save/edit/delete/find data from mongo database very easily. For example retrieving user looks like this 
+`var myLevel = await level.findById(userLevelId)` - it will return user level by its id.
+<br/>
+
+## Text Processing - Task similarity
+
+
    
    
    
