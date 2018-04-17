@@ -124,13 +124,55 @@ Below some screenshots are provided. Task page, Reward Page, Leaderboard and act
   <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714847.jpg"  width="200" height="350" />  
 </div>
   
+  <br/>
+  <br/>
   
   In current version of TaskPal, users are able to create or join existing tasks, make new taskpals, visit profiles of those taskpals, collect points doing tasks, and find new taskpals that have similar interests with them. Users can adjust the time of their task. Currenly time can be chosen from 1, 5, 10, 15, 20 minutes. After finishing every task, they are rewarded with coins, trophies, points and one new taskpal - other user who is doing similar tasks and having similar interest with him/her.
   
   
   
-  ## Backend Implementation
+## Backend Implementation
+   [NodeJs](https://nodejs.org), combined with [MongoDB](https://www.mongodb.com/) is used for programming restful API and database. As it is known, NodeJs is very flexible in terms of  development and deployment. And we favored NoSql over Relational Databases for some advantages such as easy to change schema(schema-less), no need for predefined structure of data etc,  Because of the schema agnostic nature of NoSQL databases, they’re very capable of managing change. In case of change, such as adding new or removing field in schemas, we don’t have to rewrite ETL routines, application code changes is enough to apply new changes to database collections. 
+   
+### Rest API
+  Rest API is build using Nodejs runtime which is build on Chrome's V8 JavaScript engine. Programming language is JavaScript, but [expressjs](https://expressjs.com/) is used as framework to NodeJs which helps to handle MVC(view templates like [EJS](http://embeddedjs.com/), [Jade](http://jade-lang.com/), etc), routes, etc.
+<br/>
+Below code snipped shows registering routes and starting/listening to pedefined port.
+  ```
+app.use('/taskpal/api/v1.0/users', require('./api/versions/v1.0/routes/users'));
+app.use('/taskpal/api/v1.0/tasks', require('./api/versions/v1.0/routes/tasks'));
+app.use('/taskpal/api/v1.1/users', require('./api/versions/v1.1/routes/users'));
+app.use('/taskpal/api/v1.1/tasks', require('./api/versions/v1.1/routes/tasks'));
+app.use('/taskpal/api/report', require('./api/general/routes/report'));
+
+const port = process.env.PORT | 8081
+app.listen(port)
   
+  ```
+<br/>
+To develop this rest api, below external libraries are used, use of each of them is explained in front of them.
+```
+ "dependencies": {
+    "body-parser": "^1.18.2", // This is required to parse incoming request bodies in a middleware
+    "date-diff": "^0.1.3", // This library used to compare two date and get difference in seconds, minutes, hours and so on
+    "ejs": "^2.5.8", // This is view template, it is used to configur and develop little dashboard to add/edit/remove tasks/levels
+    "express": "^4.16.2", // Express framework
+    "express-promise-router": "^2.0.0", // Express related, required for router implementation
+    "fs-extra": "^4.0.2", // This library used for reading and writing files to filesystem both asyc/sync
+    "mongoose": "^4.13.5", // Mongoose is mongodb object modeling for node.js
+    "morgan": "^1.9.0", // Logging
+    "node-schedule": "^1.2.5", // executing periodic jobs
+    "randomstring": "^1.1.5" // generating random string, used for generating task promo code(not used in this version)
+  }
+  
+```
+   
+   
+   
+   
+   
+   
+   
   
   
   
