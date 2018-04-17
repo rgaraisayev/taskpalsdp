@@ -138,7 +138,7 @@ Below some screenshots are provided. Task page, Reward Page, Leaderboard and act
   Rest API is build using Nodejs runtime which is build on Chrome's V8 JavaScript engine. Programming language is JavaScript, but [expressjs](https://expressjs.com/) is used as framework to NodeJs which helps to handle MVC(view templates like [EJS](http://embeddedjs.com/), [Jade](http://jade-lang.com/), etc), routes, etc.
 <br/>
 Below code snipped shows registering routes and starting/listening to pedefined port.
-  ```
+```
 app.use('/taskpal/api/v1.0/users', require('./api/versions/v1.0/routes/users'));
 app.use('/taskpal/api/v1.0/tasks', require('./api/versions/v1.0/routes/tasks'));
 app.use('/taskpal/api/v1.1/users', require('./api/versions/v1.1/routes/users'));
@@ -147,10 +147,10 @@ app.use('/taskpal/api/report', require('./api/general/routes/report'));
 
 const port = process.env.PORT | 8081
 app.listen(port)
-  
-  ```
+```
 <br/>
 To develop this rest api, below external libraries are used, use of each of them is explained in front of them.
+
 ```
  "dependencies": {
     "body-parser": "^1.18.2", // This is required to parse incoming request bodies in a middleware
