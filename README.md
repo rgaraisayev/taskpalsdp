@@ -107,12 +107,14 @@ This receiver is registered `onResume()` life circle method, and unregistered in
 
 ```
 
-  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714850.jpg"  width="100" height="250" />
-  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714849.jpg"  width="100" height="250" />
-  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714848.jpg"  width="100" height="250" />
-  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714847.jpg"  width="100" height="250" />
+Below some screenshots are provided. Task page, Reward Page, Leaderboard and activities, Home page.
 
-  
+<div align="center" display="inline-block">
+  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714850.jpg"  width="200" height="350" />
+  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714849.jpg"  width="200" height="350" />
+  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714848.jpg"  width="200" height="350" />
+  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714847.jpg"  width="200" height="350" />  
+</div>
   
   
   In current version of TaskPal, users are able to create or join existing tasks, make new taskpals, visit profiles of those taskpals, collect points doing tasks, and find new taskpals that have similar interests with them. Users can adjust the time of their task. Currenly time can be chosen from 1, 5, 10, 15, 20 minutes.
