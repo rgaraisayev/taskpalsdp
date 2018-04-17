@@ -28,8 +28,38 @@ Happy Tasking !
   Current version of TaskPal is built on Android platform. NodeJs is used for backend programming, for storing data, MongoDB is used as NoSQL database, Amazon Elastic Computing for cloud (AWS EC2), so the database and web server are located there.Facebook SDK, Google SDK are used for login. In later sections more information is provided.
 
 ## Client implementation (Android)
-  The main functionality of the application is Timer, implemented with the use of android background service. Service is in 'START_STICKY' mode, so it is supposed to work even the app is closed. If user leaves app while doing task, notifcation will pop up showing visual progress of task time, and the time user is spending outside of app. Below some screenshots added.
+  The main functionality of the application is Timer, implemented with the use of android background service. Service is in 'START_STICKY' mode, so it is supposed to work even the app is closed. If user leaves app while doing task, notifcation will pop up showing visual progress of task time, and the time user is spending outside of app.
   
+When service gets started first time by app or by android system after it app is killed(cleared from recents), `timer()` function is called. 
+  ``` @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        timer();
+        return START_STICKY;
+    }    
+  ```
+`timer()` function is where whole timer logic is implemented. Inside `timer()` function, `java.util.TImer` class is used to schedule execution at fixed rate. Every 1 second it updates UI(if app is visible to user), updates time, local database data(task), and every 5-7 seconds it syncs local data with server using rest API.
+
+```
+ timer.scheduleAtFixedRate(new TimerTask() {
+            long localUpdateTime;
+            long remoteUpdateTime;
+
+            @Override
+            public void run() {
+             LEFT_TIME = LEFT_TIME <= 0 ? 0 : LEFT_TIME - 1; // decrease time(secods) by one
+             // other code implementation goes below
+             
+            }
+        }, 0, 1000);// every tick is 1 second
+
+```
+  
+  
+  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714850.jpg"  width="200" height="350" />
+  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714849.jpg"  width="200" height="350" />
+  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714848.jpg"  width="200" height="350" />
+  <img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/photo5379957081458714847.jpg"  width="200" height="350" />
+
   
   
   
