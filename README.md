@@ -168,7 +168,9 @@ To develop this rest api, below external libraries are used, use of each of them
   
 ```
 <br/>
+
 ## Database
+
 MongoDb is used to handle database. Mongoose mongodb object modelling used for making database operations simple. This is example mongoose schema, it represents `level` collection in database.
 
 ```
