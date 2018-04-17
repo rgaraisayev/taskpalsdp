@@ -106,6 +106,14 @@ This receiver is registered `onResume()` life circle method, and unregistered in
     }
 
 ```
+<hr/>
+
+Below you can see simplified user flow diagram:
+<div align="center">
+<img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/User flow diagram of Taskpal.jpg"  width="500" height="450" />
+</div>
+
+<hr/>
 
 Below some screenshots are provided. Task page, Reward Page, Leaderboard and activities, Home page.
 
@@ -117,4 +125,12 @@ Below some screenshots are provided. Task page, Reward Page, Leaderboard and act
 </div>
   
   
-  In current version of TaskPal, users are able to create or join existing tasks, make new taskpals, visit profiles of those taskpals, collect points doing tasks, and find new taskpals that have similar interests with them. Users can adjust the time of their task. Currenly time can be chosen from 1, 5, 10, 15, 20 minutes.
+  In current version of TaskPal, users are able to create or join existing tasks, make new taskpals, visit profiles of those taskpals, collect points doing tasks, and find new taskpals that have similar interests with them. Users can adjust the time of their task. Currenly time can be chosen from 1, 5, 10, 15, 20 minutes. After finishing every task, they are rewarded with coins, trophies, points and one new taskpal - other user who is doing similar tasks and having similar interest with him/her.
+  
+  
+  
+  ## Backend Implementation
+  
+  
+  
+  
