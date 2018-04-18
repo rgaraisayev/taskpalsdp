@@ -12,7 +12,7 @@
     * Rest API
     * Database
     * Text Processing
-* Conclusion
+* [Conclusion](#conclusion)
 
 
 # What is it?
@@ -204,10 +204,18 @@ Mongoose allows us to save/edit/delete/find data from mongo database very easily
 <br/>
 
 ## Text Processing - Task similarity
-
+  One of the important features of Taskpal is matching and connecting users with same interests. To do this, we get the help of document similarity API from Marketplace (https://market.mashape.com/). We tried various text similarity APIs and tested them with short and long texts. Our success criteria for text similarity is that it should work on mainly short texts, because we have to compare task names which contain 3 to 4 words. Currently, we are searching for libraries that are customizable, meaning, models for parsing text and finding semantic similarity can be adjusted to our needs. Levels of similarity should be definable, such as similar, direct and indirect similarity. For example, “Learning Java programming language basics” and “learning Swift programming language basics” are similar in terms of learning, but objective is completely different, meaning Swift and Java developer’s interests may not be same. So this could fall into indirect similarity category. However, current API considers them as complete similar. Since this is problem, we are planning to build our own text processing model.
+  
+<br/>
+This is simple visual representation of how algorithm should work to mark similar people:
+<br/>
+<img src="https://github.com/rgaraisayev/taskpalsdp/blob/master/screens/tpSteps.jpg"/>
+    
 
    
-   
+# Conclusion
+
+In conclusion, we developed beta version of TaskPal application. Almost all features are implemented and we are continuosly improving design, quality and functionality. Still much work is needed to be done.
    
   
   
