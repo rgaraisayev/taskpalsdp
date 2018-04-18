@@ -4,14 +4,14 @@
 
 # Table of content
 
-* What is it?
-* Implementation
-  * Technical Implementation overview 
-  * Android Implementation overview
-  * Backend Design&Implementation
-    * Rest API
-    * Database
-    * Text Processing
+* [What is it?](#what-is-it)
+* [Implementation](#implementation)
+  * [Technical Implementation overview](#technical-implementation-overview)
+  * [Android Implementation overview](#android-implementation-overview)
+  * [Backend Implementation](#backend-implementation)
+    * [Rest API](#rest-api)
+    * [Database](#database)
+    * [Text Processing](#text-processing)
 * [Conclusion](#conclusion)
 
 
