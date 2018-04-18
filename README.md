@@ -11,7 +11,7 @@
   * [Backend Implementation](#backend-implementation)
     * [Rest API](#rest-api)
     * [Database](#database)
-    * [Text Processing](#text-processing-task-imilarity)
+    * [Text Processing](#text-processing-task-similarity)
 * [Conclusion](#conclusion)
 
 
