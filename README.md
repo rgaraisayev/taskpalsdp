@@ -6,12 +6,12 @@
 
 * [What is it?](#what-is-it)
 * [Implementation](#implementation)
-  * [Technical Implementation overview](#technical-implementation-overview)
-  * [Android Implementation overview](#android-implementation-overview)
+  * [Technical Implementation](#technical-implementation-overview)
+  * [Client implementation](#client-implementation)
   * [Backend Implementation](#backend-implementation)
     * [Rest API](#rest-api)
     * [Database](#database)
-    * [Text Processing](#text-processing)
+    * [Text Processing](#text-processing--task-similarity)
 * [Conclusion](#conclusion)
 
 
