@@ -7,11 +7,11 @@
 * [What is it?](#what-is-it)
 * [Implementation](#implementation)
   * [Technical Implementation](#technical-implementation-overview)
-  * [Client implementation](#client-implementation-(android))
+  * [Client implementation](#client-implementation-android)
   * [Backend Implementation](#backend-implementation)
     * [Rest API](#rest-api)
     * [Database](#database)
-    * [Text Processing](#text-processing--task-similarity)
+    * [Text Processing](#text-processing-task-similarity)
 * [Conclusion](#conclusion)
 
 
