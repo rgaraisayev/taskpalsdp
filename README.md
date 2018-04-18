@@ -203,7 +203,7 @@ Mongoose allows us to save/edit/delete/find data from mongo database very easily
 `var myLevel = await level.findById(userLevelId)` - it will return user level by its id.
 <br/>
 
-## Text Processing - Task similarity
+## Text Processing Task similarity
   One of the important features of Taskpal is matching and connecting users with same interests. To do this, we get the help of document similarity API from Marketplace (https://market.mashape.com/). We tried various text similarity APIs and tested them with short and long texts. Our success criteria for text similarity is that it should work on mainly short texts, because we have to compare task names which contain 3 to 4 words. Currently, we are searching for libraries that are customizable, meaning, models for parsing text and finding semantic similarity can be adjusted to our needs. Levels of similarity should be definable, such as similar, direct and indirect similarity. For example, “Learning Java programming language basics” and “learning Swift programming language basics” are similar in terms of learning, but objective is completely different, meaning Swift and Java developer’s interests may not be same. So this could fall into indirect similarity category. However, current API considers them as complete similar. Since this is problem, we are planning to build our own text processing model.
   
 <br/>
